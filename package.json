@@ -4,12 +4,13 @@
   "description": "Learning node, express, and mongoDB",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon server.js",
-    "dev": "nodemon app.js"
+    "start:dev": "cross-env NODE_ENV=development nodemon server.js",
+    "start:prod": "cross-env NODE_ENV=production nodemon server.js"
   },
   "author": "Nathan Conlon",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.4.5",
     "eslint": "^8.57.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^9.1.0",
@@ -22,5 +23,8 @@
     "morgan": "^1.10.0",
     "nodemon": "^3.1.4",
     "prettier": "^3.3.2"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
   }
 }
